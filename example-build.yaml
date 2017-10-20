@@ -3,4 +3,11 @@ kind: Build
 metadata:
   name: example-build
 spec:
-  todo: build spec.
+  source:
+    repoSource:
+      repoName: default
+      branchName: master
+  steps:
+  - name: gcr.io/cloud-builders/gcloud:latest
+    entrypoint: /bin/cat
+    args: [/workspace/.gitignore]
