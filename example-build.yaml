@@ -1,0 +1,6 @@
+apiVersion: "mattmoor.io/v1"
+kind: Build
+metadata:
+  name: example-build
+spec:
+  todo: build spec.
